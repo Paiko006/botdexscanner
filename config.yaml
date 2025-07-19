@@ -1,0 +1,59 @@
+# DEXScreener API settings
+dexscreener:
+  api_url: "https://api.dexscreener.com/latest/dex/tokens"  # Verify with official docs
+  pocket_universe_api: "https://api.pocketuniverse.app/v1/check-volume"  # Placeholder
+
+# Rugcheck.xyz API settings
+rugcheck:
+  api_url: "https://api.rugcheck.xyz"  # Rugcheck API base URL
+  api_key: "your_rugcheck_api_key"  # Replace with your Rugcheck API key
+  chain: "solana"  # Blockchain for scans (e.g., solana)
+
+# Telegram settings for notifications and ToxiSol
+telegram:
+  bot_token: "your_telegram_bot_token"  # Telegram Bot API token from BotFather
+  chat_id: "your_chat_id"  # Telegram chat ID for notifications
+  toxisol_bot: "@ToxiSolBot"  # ToxiSol bot username (replace if different)
+  wallet_address: "your_solana_wallet_address"  # Solana wallet for ToxiSol trades
+  wallet_private_key: "your_wallet_private_key"  # Private key (store securely)
+
+# Database settings
+database:
+  type: "sqlite"
+  name: "dexscreener.db"
+
+# Filters for token analysis
+filters:
+  min_market_cap: 1000000
+  max_daily_volume: 5000000
+  min_liquidity: 50000
+  max_price_change: 500
+  min_price_drop: -90
+  max_age_hours: 24
+
+# Fake volume detection settings
+fake_volume:
+  volume_liquidity_ratio: 50
+  volume_spike_threshold: 1000
+  min_trades_for_spike: 10
+  pocket_universe_enabled: true
+
+# Bundle detection settings
+bundle:
+  max_wallets: 5
+  min_percentage: 2
+  time_window_seconds: 60
+
+# Blacklists for coins and developers
+blacklist:
+  coins:
+    - "0xBadTokenAddress1"
+    - "0xBadTokenAddress2"
+  devs:
+    - "0xBadDevAddress1"
+    - "0xBadDevAddress2"
+
+# Analysis intervals
+analysis:
+  analyze_interval: 3600
+  rug_check_interval: 1800
