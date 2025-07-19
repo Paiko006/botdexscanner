@@ -1,4 +1,3 @@
 requests
 pyyaml
-sqlite3
 python-telegram-bot
